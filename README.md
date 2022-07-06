@@ -3,17 +3,17 @@
 Gunakan yarn untuk install dependency
 
 ```
-yarn install
+npm run install
 ```
 
 ### Compiles and hot-reloads for development
 
 ```
-yarn dev
+npm run dev
 ```
 
 ### Compiles and minifies for production
 
 ```
-yarn build
+npm run build
 ```
