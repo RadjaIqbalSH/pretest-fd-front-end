@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
 import { selectProduct } from '@store/product';
 import { FiStar, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { Ads } from '@components';
 import { useRef, useState } from 'react';
 import { useEffect } from 'react';
 import { useCallback } from 'react';
+import { Ads } from '@radjaiqbalsh/fd-pretest-component-library';
 import { ReviewCard } from '@components/ReviewCard';
 
 export const LatestReview = () => {
