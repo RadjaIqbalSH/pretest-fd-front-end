@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import { selectProduct } from '@store/product';
 
 import { FiChevronRight, FiStar } from 'react-icons/fi';
-
 import { TopAvatarCard } from '@radjaiqbalsh/fd-pretest-component-library';
 
 export const EditorsChoise = () => {

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const NavLink = () => {
   return (
     <div className="w-full h-16 md:flex border-2 border-y-gray-200 hidden">

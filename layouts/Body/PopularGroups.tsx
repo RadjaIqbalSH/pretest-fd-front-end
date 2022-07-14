@@ -1,7 +1,5 @@
 import React, { useRef, useState, useEffect, MouseEventHandler, TouchEventHandler } from 'react';
-
 import { FiChevronRight, FiUser, FiMessageCircle, FiList } from 'react-icons/fi';
-
 import { GroupCard } from '@radjaiqbalsh/fd-pretest-component-library';
 
 export const PopularGroups = () => {

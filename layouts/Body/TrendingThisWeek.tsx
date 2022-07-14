@@ -1,8 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { useCallback } from 'react';
-
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { FiStar, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-
 import { Card } from '@radjaiqbalsh/fd-pretest-component-library';
 
 export const TrendingThisWeek = () => {

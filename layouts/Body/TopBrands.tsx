@@ -1,7 +1,5 @@
 import React, { useRef, useState, useEffect, MouseEventHandler, TouchEventHandler } from 'react';
-
 import { Brands } from '@radjaiqbalsh/fd-pretest-component-library';
-
 import { FiChevronRight } from 'react-icons/fi';
 
 export const TopBrands = () => {
