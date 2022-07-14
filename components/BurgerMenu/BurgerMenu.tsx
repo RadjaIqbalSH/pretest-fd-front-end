@@ -1,9 +1,9 @@
-import React from "react";
-import { FiMenu } from "react-icons/fi";
+import React from 'react';
+import { FiMenu } from 'react-icons/fi';
 
 export const BurgerMenu = () => {
   return (
-    <button className="block md:hidden w-8 h-8">
+    <button className="w-6 h-full">
       <FiMenu className="w-full h-full hover:text-red-400" />
     </button>
   );

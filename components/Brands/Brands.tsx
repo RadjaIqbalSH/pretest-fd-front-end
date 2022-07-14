@@ -1,14 +1,13 @@
-import React from "react";
-import Image from "next/image";
-
-export interface IBrandsProps {
-  brandsSrc: string;
+export interface IBrands {
+  brandSrc: string;
 }
 
-export const Brands = ({ brandsSrc }: IBrandsProps) => {
+export const Brands = ({ brandSrc }: IBrands) => {
   return (
-    <div className="h-fit w-[222px] flex items-center justify-center">
-      <Image src={brandsSrc} width={100} height={100}></Image>
+    <div className="w-[160px] h-fit rounded-lg bg-white">
+      <div className="aspect-square w-full bg-white relative">
+        <img className="w-full h-full object-contain" src={brandSrc} alt="Brand image"></img>
+      </div>
     </div>
   );
 };

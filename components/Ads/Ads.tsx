@@ -1,14 +1,19 @@
-import classNames from "classnames";
-
 export interface AdsProps {
   label: string;
-  height: string;
+  label2?: string;
+  className?: string;
 }
 
-export const Ads = ({ label, height }: AdsProps) => {
+export const Ads = ({ label, label2, className }: AdsProps) => {
   return (
-    <div className={classNames(`mx-auto w-full lg:w-[970px] h-[${height}] bg-gray-200 flex flex-col items-center justify-center`)}>
-      <p className="text-3xl font-semibold text-gray-600">{label}</p>
+    <div
+      className={[
+        'bg-black-100 border-2 border-black-200 flex flex-col items-center justify-center',
+        className,
+      ].join(' ')}
+    >
+      <p className="text-2xl font-bold text-black-400">{label}</p>
+      {label2 && <p className="text-2xl font-bold text-black-400">{label2}</p>}
     </div>
   );
 };

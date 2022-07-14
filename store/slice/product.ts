@@ -1,18 +1,24 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { HYDRATE } from "next-redux-wrapper";
-import { AppState, AppThunk } from "..";
-import { getData } from "services/getData";
+import { createSlice } from '@reduxjs/toolkit';
+import { HYDRATE } from 'next-redux-wrapper';
+import { AppState, AppThunk } from '..';
+import { getData } from 'services/getData';
 
 export const ProductSlice = createSlice({
-  name: "product",
+  name: 'product',
 
   initialState: {
-    data: {},
+    data: {
+      editorsChoise: [],
+      latestArticle: [],
+      latestReview: [],
+    },
   },
 
   reducers: {
-    setProductData: (state, action) => {
-      state.data = action.payload;
+    setProductData: (state: any, action: any) => {
+      state.data.editorsChoise = action.payload[`editor's choice`];
+      state.data.latestArticle = action.payload[`latest articles`];
+      state.data.latestReview = action.payload[`latest review`];
     },
   },
 
@@ -22,7 +28,9 @@ export const ProductSlice = createSlice({
         return state;
       }
 
-      state.data = action.payload.product.data;
+      state.data.editorsChoise = action.payload.product.data.editorsChoise;
+      state.data.latestArticle = action.payload.product.data.latestArticle;
+      state.data.latestReview = action.payload.product.data.latestReview;
     },
   },
 });
@@ -31,7 +39,6 @@ export const { setProductData } = ProductSlice.actions;
 
 export const selectProduct = (state: AppState) => state.product;
 
-// You can do async http calls with thunks
 export const fetchProduct = (): AppThunk => async (dispatch) => {
   const response = await getData();
   dispatch(setProductData(response));

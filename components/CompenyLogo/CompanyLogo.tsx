@@ -1,12 +1,18 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export const CompanyLogo = () => {
   return (
     <Link href="/" passHref>
-      <a>
-        <Image src={"/logo/fd-logo.png"} width={180} height={50} alt="Company Logo" />
+      <a className="relative w-96 h-10 bg-red-200">
+        <Image
+          src={'/logo/fd-logo.png'}
+          layout="fill"
+          title="Female Daily"
+          alt="Company Logo"
+          objectFit="contain"
+        />
       </a>
     </Link>
   );

@@ -1,19 +1,42 @@
-import React from "react";
-import { Article } from "@components";
-import { useSelector } from "react-redux";
-import { selectProduct } from "../../../store/slice/product";
-import { HiOutlineChevronRight } from "react-icons/hi";
-import { Section } from "@radjaiqbalsh/fd-pretest-component-library";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { selectProduct } from '@store/product';
+import { FiChevronRight } from 'react-icons/fi';
+import { ArticleCard } from '@components/ArticleCard';
 
 export const LatestArticle = () => {
-  const { data = [] } = useSelector(selectProduct);
+  const {
+    data: { latestArticle },
+  } = useSelector(selectProduct);
   return (
-    <Section title="Latest Article" subTitle="Say you can make better purchese decision" showMore={true} icon={<HiOutlineChevronRight className=" w-5 h-5" />}>
-      <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 mt-10">
-        {data[`latest articles`].map((value, index) => {
-          return <Article key={index} productSrc={value.image} title={value.title} author={value.author} lastRelese={value.published_at} />;
+    <div className="container mt-16">
+      <div className="flex justify-between items-end mx-auto max-w-[1120px] mb-8">
+        <div>
+          <h1 className="text-2xl font-bold">Latest Articles</h1>
+          <p className="text-lg text-black-300">So you can make better purchase decision</p>
+        </div>
+        <button className="flex items-center space-x-4 text-red-400 hover:text-red-300 cursor-pointer">
+          <p className="text-lg font-semibold cursor-pointer">Show more</p>
+          <FiChevronRight className="w-6 h-6" />
+        </button>
+      </div>
+      <div className="mx-auto max-w-[1120px] h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {latestArticle.map(({ title, author, image, published_at }, index: number) => {
+          return (
+            <ArticleCard
+              key={index.toString()}
+              className="w-full h-fit"
+              keyIndex={index.toString()}
+              data={{
+                articleUrl: image,
+                title: title,
+                userName: author,
+                publish: published_at,
+              }}
+            />
+          );
         })}
       </div>
-    </Section>
+    </div>
   );
 };

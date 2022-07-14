@@ -1,5 +1,5 @@
-import React from "react";
-import { FiLock } from "react-icons/fi";
+import React from 'react';
+import { FiLock } from 'react-icons/fi';
 
 export const LoginButton = () => {
   return (

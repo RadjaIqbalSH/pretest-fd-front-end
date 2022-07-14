@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
-import { SearchBar, BurgerMenu, CompanyLogo, LoginButton, NavLink } from "@components";
-import Link from "next/link";
+import { SearchBar, BurgerMenu, CompanyLogo, LoginButton, NavLink } from '@components';
+import Link from 'next/link';
 
 export const Header = () => {
   return (
