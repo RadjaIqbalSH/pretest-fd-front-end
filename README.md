@@ -1,19 +1,17 @@
-## Project setup
-
-Gunakan yarn untuk install dependency
+### install dependency
 
 ```
-npm run install
+npm install
 ```
 
-### Compiles and hot-reloads for development
+### Run Project
 
 ```
 npm run dev
 ```
 
-### Compiles and minifies for production
+### Build Project
 
 ```
-npm run build
+npm run Build
 ```
