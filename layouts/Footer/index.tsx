@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Ads } from '@components';
+import { Ads } from '@radjaiqbalsh/fd-pretest-component-library';
 export const Footer = () => {
   return (
     <>
