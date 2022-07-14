@@ -1,8 +1,8 @@
 import React from 'react';
-import { Ads } from '@components';
 import { EditorsChoise } from './EditorsChoise';
 import { BestProducts } from './BestProduct';
 import { LatestArticle } from './LatestArticle';
+import { Ads } from '@radjaiqbalsh/fd-pretest-component-library';
 import { LatestReview } from './LatestReview';
 import { PopularGroups } from './PopularGroups';
 import { LatestVideos } from './LatestVideos';
